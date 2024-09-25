@@ -1,0 +1,7 @@
+{
+    "target": ["target1", "target2"], 
+    "method": "thread",
+    "question": ["what's up?!", "have a nice day!", "hi!"],
+    "times": 50,
+    "useragents": "useragents.txt"
+}
