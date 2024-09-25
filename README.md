@@ -1,5 +1,7 @@
 # ngl-spam
 ngl-spam is a tool to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective!
+
+This program uses *[nlohmann's json](https://github.com/nlohmann/json)* header to work with .json files.
 ## Usage
 ### Available Arguments
 ```bash
@@ -55,8 +57,4 @@ ls /usr/include/curl/curl.h
 #### Compile
 ```bash
 g++ main.cpp ngl.cpp -lcurl -o ngl
-```
-#### Move to /usr/local/bin
-```bash
-sudo mv ngl /usr/local/bin
 ```
