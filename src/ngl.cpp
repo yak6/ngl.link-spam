@@ -1,7 +1,3 @@
-//  █▄░█ █▀▀ █░░ ▄▄ █▀ █▀█ ▄▀█ █▀▄▀█  
-// █░▀█ █▄█ █▄▄ ░░ ▄█ █▀▀ █▀█ █░▀░█
-// -> https://github.com/yak6/ngl-spam <-
-
 #include <iostream>
 #include <thread>
 #include <vector>
@@ -16,7 +12,7 @@
 #include <random>  
 #include <iterator>  
 
-std::string fast_useragent() { 
+std::string fast_useragent() { // for --fuck, --ask
     std::list<std::string> useragents = { 
         "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36 LBBROWSER",
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:37.0) Gecko/20100101 Firefox/37.0",
@@ -182,7 +178,7 @@ void send(const std::string target, const std::string question, const std::strin
             if (responseString.find("questionId") != std::string::npos) {
                 //std::cout << "[questionId] " << responseString << std::endl; 
             } else {
-                std::cerr << "[Warning] NGL didn't return 'questionId'! [✗]" << std::endl;
+                std::cerr << "[Error] Failed to send. NGL didn't return questionId! [✗]" << std::endl;
             }
         }
 
@@ -201,11 +197,11 @@ void spam(std::string target, std::list<std::string> questions, const std::strin
                 std::string deviceId = random_deviceId();
                 std::string userAgent = random_useragent(useragents);
                 send(target, question, deviceId, userAgent);
-                if (log) {std::cout << "[Spam] " << i << "/" << iterations << " (" << (static_cast<double>(i)/iterations)*100 << "%)" << " [🗸]" <<std::endl;}
+                if (log) {std::cout << "[Spam] " << i << "/" << iterations << " (" << (static_cast<double>(i)/iterations)*100 << "%)" << " [✔]" <<std::endl;}
         }        
     } else if (method == "thread") { 
         std::vector<std::thread> threads;
-        if (log) {std::cout << "[Spam] " << "Starting, please wait... [🗸]" << std::endl;}
+        if (log) {std::cout << "[Spam] " << "Starting threads, please wait... [✔]" << std::endl;}
         for (int i = 0; i < iterations; ++i) {
             threads.emplace_back([&, i]() {
                 std::string deviceId = random_deviceId();
@@ -213,7 +209,7 @@ void spam(std::string target, std::list<std::string> questions, const std::strin
                 send(target, question, deviceId, userAgent);
             });
         }
-        if (log) {std::cout << "[Spam] " << "Started, finishing... [🗸]" << std::endl;}
+        if (log) {std::cout << "[Spam] " << "Started, finishing... [✔]" << std::endl;}
 
         int counter = 0;
 
@@ -221,10 +217,8 @@ void spam(std::string target, std::list<std::string> questions, const std::strin
             if (th.joinable()) {
                 ++counter;
                 th.join();
-                if (log) {std::cout << "[Spam] " << counter << "/" << iterations << " (" << (static_cast<double>(counter)/iterations)*100 << "%)" << " [🗸]" <<std::endl;}
+                if (log) {std::cout << "[Spam] " << counter << "/" << iterations << " (" << (static_cast<double>(counter)/iterations)*100 << "%)" << " [✔]" <<std::endl;}
             }
         }
-    } else if (method == "single") { 
-        send(target, question, random_deviceId(), random_useragent(useragents));
     }
 }
