@@ -26,6 +26,10 @@ Uninstall:
 ```bash
 sudo make uninstall
 ```
+### Get useragents file
+```bash
+curl https://raw.githubusercontent.com/yak6/ngl-spam/refs/heads/main/config/useragents.txt > useragents.txt
+```
 
 ## Usage
 ### Available Arguments
