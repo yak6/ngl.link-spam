@@ -1,16 +1,40 @@
 # ngl-spam
-ngl-spam is a tool to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective!
+ngl-spam is a tool to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective.
 
-This program uses *[nlohmann's json](https://github.com/nlohmann/json)* header to work with .json files.
+<h6>This program uses https://github.com/nlohmann/json header to work with .json files.</h6>
+
+## Install 
+Clone repository
+
+```bash
+git clone https://github.com/yak6/ngl-spam
+```
+Go to cloned repository directory
+
+```bash
+cd ngl-spam
+```
+Now, you can compile using:
+```bash
+make
+```
+Or install using:
+```bash
+sudo make install
+```
+Uninstall:
+```bash
+sudo make uninstall
+```
 
 ## Usage
 ### Available Arguments
 ```bash
---ask <target> <question> Ask user a single question.
---load <config>           Run spammer using config file. 
---fuck <target>           Send 50 messages with random characters.
+--help                    Show this help message.
 --create                  Create a sample .json config file.
---help                    Shows help message.
+--load <config>           Run spammer using config file.
+--ask <target> <question> Ask user a single question.
+--fuck <target>           Send 50 messages fast.
 ```
 
 ### Running with config
@@ -36,28 +60,3 @@ This program uses *[nlohmann's json](https://github.com/nlohmann/json)* header t
 
 **useragents** - *path to user agents file.*
 
-## Compiling
-Install cURL and curl-devel (for curl.h):
-
-#### Debian:
-```bash
-sudo apt install curl libcurl4-openssl-dev
-```
-#### Fedora/Redhat:
-```bash
-sudo dnf install curl libcurl-devel
-```
-#### Arch:
-```bash
-sudo pacman -S curl
-```
-#### Make sure it's installed:
-```bash
-ls /usr/include/curl/curl.h
-```
-#### Compile
-```bash
-g++ main.cpp ngl.cpp -lcurl -o ngl
-```
-## Don't want to compile it on your own? 
-### > [Download here](https://github.com/yak6/ngl-spam/releases/download/ngl-spam/release-1.01.tar.gz)
