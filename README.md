@@ -1,6 +1,5 @@
-# NGL Spam
-NGL Spam is a tool to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective. 
-<h6>This program uses https://github.com/nlohmann/json header to work with .json files.</h6>
+# ngl.link-tool
+ngl.link-tool allows, among other things, to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective. 
 
 ## Installation
 Clone repository
@@ -59,3 +58,4 @@ curl https://raw.githubusercontent.com/yak6/ngl-spam/refs/heads/main/config/user
 **times** - *how many messages should be sent per user.*
 
 **useragents** - *path to user agents file.*
+#### This tool uses [nlohmann's json](https://github.com/nlohmann/json) header to work with .json files!
