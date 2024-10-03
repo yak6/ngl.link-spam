@@ -1,5 +1,6 @@
-# ngl.link-tool
-ngl.link-tool allows, among other things, to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective. 
+# About
+This tool allows you to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective. 
+Spam with it is very effective due to the use of multithreading!
 
 ## Installation
 Clone repository
