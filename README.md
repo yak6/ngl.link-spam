@@ -5,20 +5,21 @@ This tool allows you to spam on **[ngl.link](https://ngl.link/)** service. It's 
 Clone repository
 
 ```bash
-git clone https://github.com/yak6/ngl-spam
+git clone https://github.com/yak6/ngl.link-spam
 ```
 After cloning, cd into it's directory and install it using:
 
 ```bash
 sudo make install
 ```
-Or if you didn't like it:
+This will compile the program and add it to the /usr/local/bin path.
+
+Check if it's working properly:
 ```bash
-sudo make uninstall
+ngl --help
 ```
 
-## Usage
-### You can run it with different arguments:
+## Arguments
 
 **--help** - Shows help message
 
@@ -31,7 +32,7 @@ sudo make uninstall
 **--fuck <target>** - Send 50 messages really fast!
 
 ## Running using config
-***You can create it by running `--create` argument***
+***You can create config.json by running `--create` argument***
 
 ### Sample config:
 ```json
@@ -44,6 +45,7 @@ sudo make uninstall
 }
 ```
 ### Getting useragents file
+(it's also stored in config/ directory in the repo)
 ```bash
 curl https://raw.githubusercontent.com/yak6/ngl-spam/refs/heads/main/config/useragents.txt > useragents.txt
 ```
@@ -58,4 +60,5 @@ curl https://raw.githubusercontent.com/yak6/ngl-spam/refs/heads/main/config/user
 **times** - *how many messages should be sent per user.*
 
 **useragents** - *path to user agents file.*
-#### This tool uses [nlohmann's json](https://github.com/nlohmann/json) header to work with .json files!
+
+#### Created with [nlohmann's json](https://github.com/nlohmann/json), [curl](https://github.com/curl/curl)
