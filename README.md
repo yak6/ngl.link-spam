@@ -60,5 +60,9 @@ curl https://raw.githubusercontent.com/yak6/ngl-spam/refs/heads/main/config/user
 **times** - *how many messages should be sent per user.*
 
 **useragents** - *path to user agents file.*
+# Screenshots
+<img src="https://github.com/user-attachments/assets/8d53912e-7c23-4222-a36f-a2f5a95b8cf9" alt="drawing" width="200"/>
+
+![obraz](https://github.com/user-attachments/assets/9d72a5e8-d671-48b3-9bb2-519c3bee42b4)
 
 #### Created with [nlohmann's json](https://github.com/nlohmann/json), [curl](https://github.com/curl/curl)
