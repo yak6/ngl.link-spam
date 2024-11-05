@@ -1,5 +1,7 @@
 # About
-This tool allows you to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective due to the use of multithreading!
+This tool allows you to spam on **[ngl.link](https://ngl.link/)** service. It's very fast and effective due to the use of multithreading.
+
+Idk if it works on Windows.
 
 ## Installation
 Clone repository
